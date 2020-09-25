@@ -19,7 +19,7 @@ int BetterPriorityQueue::Contains(DNode n)
 
 bool BetterPriorityQueue::Update(DNode n)
 {
-    if (this->Contains(n) != -1)
+    if (this->Contains(n) != -1 && n.pri < this->c.at(this->Contains(n)).pri)
     {
         vector<DNode> temp;
 
